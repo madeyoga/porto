@@ -1,0 +1,44 @@
+title: "Made Yoga Mahardika | Web Developer | Python Django | Nuxt"
+hero:
+  intro: Hey, I'm Made Yoga.
+  title: Fullstack Software Developer.
+  location: Samarinda, Indonesia
+  links:
+    - icon: i-mdi-github
+      url: https://github.com/madeyoga
+techstack:
+  - title: Django
+    icon: i-vscode-icons-file-type-django
+  - title: Python
+    icon: i-vscode-icons-file-type-python
+  - title: CSharp
+    icon: i-vscode-icons-file-type-csharp2
+  - title: Vue
+    icon: i-vscode-icons-file-type-vue
+  - title: HTML
+    icon: i-vscode-icons-file-type-html
+  - title: CSS
+    icon: i-vscode-icons-file-type-css2
+  - title: JavaScript
+    icon: i-vscode-icons-file-type-js-official
+  - title: Tailwind
+    icon: i-vscode-icons-file-type-tailwind
+experiences:
+  - timeframe: 2022 - 2025
+    title: Backend Software Developer
+    company: Superjaya
+    domainName: superjaya.id
+    url: https://superjaya.id
+    jobtype: Freelance
+  - timeframe: 2021 - 2025
+    title: Fullstack Software Developer
+    company: PT Media Bersama Sukses
+    domainName: mbscctv.com
+    url: https://mbscctv.com
+    jobtype: Freelance
+  - timeframe: 2024 - 2024
+    title: Frontend Software Developer
+    company: PT. Nasional Bhirawa Tama
+    domainName: nasionalrubber.co.id
+    url: https://nasionalrubber.co.id/
+    jobtype: Freelance
