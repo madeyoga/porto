@@ -4,7 +4,7 @@
       <UIcon :name="props.icon" class="size-5"></UIcon>
     </div>
     <div class="">
-      <div class="text-[15px] text-pretty text-muted">
+      <div class="text-[15px] text-pretty dark:text-muted">
         {{ props.description }}
       </div>
     </div>

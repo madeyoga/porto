@@ -1,11 +1,11 @@
 <script setup>
+import ProjectCard from '~/components/ProjectCard.vue'
+
 const { data: page } = await useAsyncData(() => queryCollection('index').first())
 
 useHead({
   title: page.value.title
 })
-
-console.log(page.value)
 
 const colorMode = useColorMode()
 
@@ -63,23 +63,15 @@ const isDark = computed({
 
             <div class="flex flex-col gap-6 justify-center h-full">
               <div>
-
-                <h1 
-                  class="font-bold text-3xl dark:text-muted leading-[1.5]"
-                >
-                  <span class="dark:text-green-400 text-green-800">{{ page.hero.intro }}</span> {{ page.hero.title }}
-                </h1>
-
-                <!-- MDC NOT RENDERING ANYTHING. I DONT KNOW WHY. HELP! -->
                 <MDC
-                  :value="'# Hello World'"
+                  :value="page.hero.title"
                   class="font-bold text-3xl dark:text-muted leading-[1.5]"
                 />
 
               </div>
 
               <div class="w-full flex items-center justify-between">
-                <div class="text-muted">
+                <div class="dark:text-muted">
                   🏠 {{ page.hero.location }}
                 </div>
 
@@ -101,7 +93,7 @@ const isDark = computed({
           <section id="techstack" class="py-16">
             <h2 class="uppercase tracking-widest dark:text-white font-bold text-lg pb-12">Tech Stack</h2>
 
-            <div class="grid grid-cols-5 gap-5 text-muted">
+            <div class="grid grid-cols-5 gap-5 dark:text-muted">
               <tech-stack-card 
                 v-for="tech in page.techstack"
                 :key="`techstack-${tech.title}`"
@@ -154,191 +146,17 @@ const isDark = computed({
               <!-- <UButton label="Email me"></UButton> -->
             </div>
 
-            <div class="flex justify-between mb-8">
-              <div class="rounded-lg w-[640px] border border-light-gray border-gray-700 p-5 flex flex-col gap-5">
-                <img src="/images/chrome_2025-07-22_15-11-17.jpg" alt="mbscctv.com design update screenshot" title="mbscctv.com design update screenshot">
-
-                <h3 class="font-semibold dark:dark:text-white text-xl tracking-wide">mbscctv.com</h3>
-
-                <p class="dark:text-muted text-pretty text-[15px]">
-                  Developed a modern landing page for a security system company, featuring a product catalog and blog section.
-                  The website is fully responsive and optimized for SEO to improve visibility and user engagement.
-                </p>
-
-                <div class="grid grid-cols-6 gap-4">
-                  <UBadge
-                    :avatar="{
-                      icon: 'i-vscode-icons-file-type-vue'
-                    }"
-                    size="md"
-                    color="neutral"
-                    variant="outline"
-                  >
-                    Vue
-                  </UBadge>
-                  <UBadge
-                    :avatar="{
-                      icon: 'i-vscode-icons-file-type-nuxt'
-                    }"
-                    size="md"
-                    color="neutral"
-                    variant="outline"
-                  >
-                    Nuxt
-                  </UBadge>
-                  <UBadge
-                    :avatar="{
-                      icon: 'i-vscode-icons-file-type-tailwind'
-                    }"
-                    size="md"
-                    color="neutral"
-                    variant="outline"
-                  >
-                    Tailwind
-                  </UBadge>
-                </div>
-              </div>
-
-              <div>
-                <UButton
-                  icon="i-lucide-external-link" size="md" color="neutral" variant="outline" 
-                  to="https://mbscctv.com" target="_blank" rel="noreferrer noopener"
-                ></UButton>
-              </div>
-            </div>
-
-            <div class="flex justify-between mb-8">
-              <div class="rounded-lg w-[640px] border border-light-gray border-gray-700 p-5 flex flex-col gap-5">
-                <img src="/images/chrome_2025-07-23_15-56-12.jpg" alt="nasionalrubber.co.id design update screenshot" title="nasionalrubber.co.id design update screenshot">
-
-                <h3 class="font-semibold dark:dark:text-white text-xl tracking-wide">nasionalrubber.co.id</h3>
-
-                <p class="dark:text-muted text-pretty text-[15px]">
-                  Developed a fully responsive landing page for a rubber industry company in Indonesia.
-                  The site features multilingual support (i18n) to cater international clients and enhance accessibility across regions.
-                </p>
-
-                <div class="grid grid-cols-6 gap-4">
-                  <UBadge
-                    :avatar="{
-                      icon: 'i-vscode-icons-file-type-vue'
-                    }"
-                    size="md"
-                    color="neutral"
-                    variant="outline"
-                  >
-                    Vue
-                  </UBadge>
-                  <UBadge
-                    :avatar="{
-                      icon: 'i-vscode-icons-file-type-nuxt'
-                    }"
-                    size="md"
-                    color="neutral"
-                    variant="outline"
-                  >
-                    Nuxt
-                  </UBadge>
-                  <UBadge
-                    :avatar="{
-                      icon: 'i-vscode-icons-file-type-tailwind'
-                    }"
-                    size="md"
-                    color="neutral"
-                    variant="outline"
-                  >
-                    Tailwind
-                  </UBadge>
-                </div>
-              </div>
-
-              <div>
-                <UButton
-                  icon="i-lucide-external-link" size="md" color="neutral" variant="outline" 
-                  to="https://nasionalrubber.co.id/" target="_blank" rel="noreferrer noopener"
-                ></UButton>
-              </div>
-            </div>
-
-            <div class="flex justify-between">
-              <div class="rounded-lg w-[640px] border border-light-gray border-gray-700 p-5 flex flex-col gap-5">
-                <img 
-                  src="/images/chrome_2025-07-24_14-44-25.jpg" 
-                  alt="Inventory management system and point of sale dashboard" 
-                  title="Inventory management system and point of sale dashboard"
-                >
-
-                <h3 class="font-semibold dark:dark:text-white text-xl tracking-wide">Point of Sale & Inventory Management System</h3>
-
-                <p class="dark:text-muted text-pretty text-[15px]">
-                  A custom-built POS and inventory management system designed for small to medium-sized retail stores. 
-                  This application runs entirely on the store's local network, ensuring fast, offline-capable operations without reliance on external servers.
-                </p>
-
-                <div class="grid grid-cols-6 gap-4">
-                  <UBadge
-                    :avatar="{
-                      icon: 'i-vscode-icons-file-type-django'
-                    }"
-                    size="md"
-                    color="neutral"
-                    variant="outline"
-                  >
-                    Django
-                  </UBadge>
-                  <UBadge
-                    :avatar="{
-                      icon: 'i-vscode-icons-file-type-tailwind'
-                    }"
-                    size="md"
-                    color="neutral"
-                    variant="outline"
-                  >
-                    Tailwind
-                  </UBadge>
-                  <UBadge
-                    size="md"
-                    color="neutral"
-                    variant="outline"
-                  >
-                    Alpine
-                  </UBadge>
-                </div>
-
-                <div class="mt-4">
-                  <ul class="grid gap-4">
-                    <LiFeature
-                      icon="i-lucide-check"
-                      description="Dashboard"
-                    ></LiFeature>
-                    <LiFeature
-                      icon="i-lucide-check"
-                      description="Real-time sales tracking"
-                    ></LiFeature>
-                    <LiFeature
-                      icon="i-lucide-check"
-                      description="Product and stock management"
-                    ></LiFeature>
-                    <LiFeature
-                      icon="i-lucide-check"
-                      description="User access control"
-                    ></LiFeature>
-                    <LiFeature
-                      icon="i-lucide-check"
-                      description="Invoicing / printable rerceipts"
-                    ></LiFeature>
-                  </ul>
-                </div>
-
-              </div>
-
-              <div>
-                <UButton
-                  icon="i-lucide-external-link" size="md" color="neutral" variant="outline" 
-                  to="https://nasionalrubber.co.id/" target="_blank" rel="noreferrer noopener"
-                ></UButton>
-              </div>
-            </div>
+            <ProjectCard
+              v-for="project in page.projects"
+              :key="project.title"
+              :title="project.title"
+              :description="project.description"
+              :link="project.link"
+              :image="project.image"
+              :techstack="project.techstack"
+              :features="project.features"
+              class="mb-8"
+            ></ProjectCard>
           </section>
         </main>
 
@@ -346,11 +164,18 @@ const isDark = computed({
           <section id="contact" class="pt-6 pb-2 border-t-1 border-neutral-800">
             <div class="flex justify-between">
 
-              <div class="text-muted">madeybog@gmail.com</div>
+              <div class="text-muted">{{ page.contact.email }}</div>
 
-              <div class="flex items-center justify-end gap-3">
-                <a href="https://github.com/madeyoga">
-                  <UIcon name="i-mdi-github" class="w-[24px] h-[24px]" />
+              <div class="flex items-center justify-end gap-4">
+                <a 
+                  v-for="link in page.contact.links"
+                  :key="`contact-${link.title}-${link.url}`"
+                  :href="link.url" 
+                  :title="link.title"
+                  target="_blank" 
+                  rel="noreferrer noopener"
+                >
+                  <UIcon :name="link.icon" class="w-[20px] h-[20px]" />
                 </a>
               </div>
             </div>

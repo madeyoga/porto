@@ -27,7 +27,29 @@ export default defineContentConfig({
           domainName: z.string().optional(),
           url: z.string().optional(),
           jobtype: z.string()
-        }))
+        })),
+        projects: z.array(z.object({
+          title: z.string(),
+          description: z.string(),
+          link: z.string(),
+          image: z.string(),
+          techstack: z.array(z.object({
+            icon: z.string(),
+            title: z.string()
+          })),
+          features: z.array(z.object({
+            icon: z.string(),
+            title: z.string()
+          }))
+        })),
+        contact: z.object({
+          email: z.string(),
+          links: z.array(z.object({
+            title: z.string(),
+            icon: z.string(),
+            url: z.string()
+          }))
+        })
       })
     }),
     content: defineCollection({

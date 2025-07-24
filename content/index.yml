@@ -1,10 +1,10 @@
 title: "Made Yoga Mahardika | Web Developer | Python Django | Nuxt"
 hero:
   intro: Hey, I'm Made Yoga.
-  title: Fullstack Software Developer.
+  title: "[Hey, I'm Made Yoga.]{.dark:text-green-400 .text-green-800} Fullstack Software Developer."
   location: Samarinda, Indonesia
   links:
-    - icon: i-mdi-github
+    - icon: i-simple-icons-github
       url: https://github.com/madeyoga
 techstack:
   - title: Django
@@ -12,9 +12,11 @@ techstack:
   - title: Python
     icon: i-vscode-icons-file-type-python
   - title: CSharp
-    icon: i-vscode-icons-file-type-csharp2
+    icon: i-simple-icons-csharp
   - title: Vue
     icon: i-vscode-icons-file-type-vue
+  - title: Nuxt
+    icon: i-vscode-icons-file-type-nuxt
   - title: HTML
     icon: i-vscode-icons-file-type-html
   - title: CSS
@@ -42,3 +44,65 @@ experiences:
     domainName: nasionalrubber.co.id
     url: https://nasionalrubber.co.id/
     jobtype: Freelance
+projects:
+  - title: mbscctv.com
+    description: Developed a modern landing page for a security system company, featuring a product catalog and blog section.
+      The website is fully responsive and optimized for SEO to improve visibility and user engagement.
+    link: https://mbscctv.com
+    image: /images/chrome_2025-07-22_15-11-17.jpg
+    techstack:
+      - icon: i-simple-icons-vuedotjs
+        title: Vue
+      - icon: i-simple-icons-nuxt
+        title: Nuxt
+      - icon: i-simple-icons-tailwindcss
+        title: Tailwind
+    features:
+  - title: nasionalrubber.co.id
+    description: Developed a fully responsive landing page for a rubber industry company in Indonesia.
+      The site features multilingual support (i18n) to cater international clients and enhance accessibility across regions.
+    link: https://nasionalrubber.co.id/
+    image: /images/chrome_2025-07-23_15-56-12.jpg
+    techstack:
+      - icon: i-simple-icons-vuedotjs
+        title: Vue
+      - icon: i-simple-icons-nuxt
+        title: Nuxt
+      - icon: i-simple-icons-tailwindcss
+        title: Tailwind
+    features:
+  - title: Point of Sale & Inventory Management System
+    description: A custom-built point of sale and inventory management system designed for small to medium-sized retail stores. 
+      This application runs entirely on the store's local network, ensuring fast, offline-capable operations without reliance on external servers.
+    link: 
+    image: /images/chrome_2025-07-24_14-44-25.jpg
+    techstack:
+      - icon: i-simple-icons-django
+        title: Django
+      - icon: i-simple-icons-tailwindcss
+        title: Tailwind
+      - icon: i-simple-icons-alpinedotjs
+        title: Alpine
+    features:
+      - icon: i-lucide-check
+        title: Dashboard and analytics
+      - icon: i-lucide-check
+        title: Real-time sales tracking
+      - icon: i-lucide-check
+        title: Product and stock management
+      - icon: i-lucide-check
+        title: User access control
+      - icon: i-lucide-check
+        title: Invoicing / printable rerceipts
+contact:
+  email: madeybog@gmail.com
+  links:
+    - title: Youtube
+      icon: i-simple-icons-youtube
+      url: https://www.youtube.com/@madey02
+    - title: Tiktok 
+      icon: i-ic-baseline-tiktok
+      url: https://www.tiktok.com/@boggg_
+    - title: github
+      icon: i-simple-icons-github
+      url: https://github.com/madeyoga
