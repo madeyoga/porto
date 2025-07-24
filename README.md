@@ -1,8 +1,18 @@
-# Nuxt Minimal Starter
+# 💼 My Developer Portfolio
+
+This is my personal portfolio website, built using [Nuxt 4](https://nuxt.com/) and deployed on GitHub Pages.
+
+The site showcases techstack, selected projects, work experience, and contact information.
+
+🔗 **Live site:** [https://madeyoga.github.io](https://madeyoga.github.io)  
+📁 **Repo:** [madeyoga/madeyoga.github.io](https://github.com/madeyoga/madeyoga.github.io)
+
+
+## Nuxt Minimal Starter
 
 Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
 
-## Setup
+### Setup
 
 Make sure to install dependencies:
 
@@ -20,7 +30,7 @@ yarn install
 bun install
 ```
 
-## Development Server
+### Development Server
 
 Start the development server on `http://localhost:3000`:
 
@@ -38,7 +48,7 @@ yarn dev
 bun run dev
 ```
 
-## Production
+### Production
 
 Build the application for production:
 
