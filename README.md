@@ -7,6 +7,7 @@ The site showcases techstack, selected projects, work experience, and contact in
 🔗 **Live site:** [https://madeyoga.github.io](https://madeyoga.github.io)  
 📁 **Repo:** [madeyoga/madeyoga.github.io](https://github.com/madeyoga/madeyoga.github.io)
 
+Feel free to fork and customize.
 
 ## Nuxt Minimal Starter
 
