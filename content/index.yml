@@ -58,8 +58,18 @@ projects:
       - icon: i-simple-icons-tailwindcss
         title: Tailwind
     features:
+      - icon: i-lucide-check
+        title: Modern Git-based CMS
+      - icon: i-lucide-check
+        title: Markdown-powered Blog
+      - icon: i-lucide-check
+        title: Dynamic Online Catalog
+      - icon: i-lucide-check
+        title: Responsive Mobile-Friendly Design
+      - icon: i-lucide-check
+        title: SEO Optimized
   - title: nasionalrubber.co.id
-    description: Developed a fully responsive landing page for a rubber industry company in Indonesia.
+    description: Developed a simple and fully responsive landing page for a rubber industry company in Indonesia.
       The site features multilingual support (i18n) to cater international clients and enhance accessibility across regions.
     link: https://nasionalrubber.co.id/
     image: /images/chrome_2025-07-23_15-56-12.jpg
@@ -71,6 +81,10 @@ projects:
       - icon: i-simple-icons-tailwindcss
         title: Tailwind
     features:
+      - icon: i-lucide-globe
+        title: Multi-language Support (i18n)
+      - icon: i-lucide-smartphone
+        title: Mobile-Friendly Design
   - title: Point of Sale & Inventory Management System
     description: A custom-built point of sale and inventory management system designed for small to medium-sized retail stores. 
       This application runs entirely on the store's local network, ensuring fast, offline-capable operations without reliance on external servers.

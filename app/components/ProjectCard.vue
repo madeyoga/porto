@@ -16,6 +16,7 @@ const props = defineProps([
         :src="props.image" 
         :alt="`${props.title} project showcase`" 
         :title="`${props.title} project showcase`"
+        class="rounded-xl"
       />
 
       <h3 class="font-semibold dark:dark:text-white text-xl tracking-wide">{{ props.title }}</h3>
@@ -24,7 +25,7 @@ const props = defineProps([
         {{ props.description }}
       </p>
 
-      <div class="grid grid-cols-6 gap-4" v-if="props.techstack">
+      <div class="grid grid-cols-2 sm:grid-cols-3 gap-4" v-if="props.techstack">
         <UBadge
           v-for="tech in props.techstack"
           :key="`${props.title} - techstack - ${tech.title} - ${tech.icon}`"
@@ -34,6 +35,7 @@ const props = defineProps([
           size="md"
           color="neutral"
           variant="outline"
+          class="justify-center rounded-full"
         >
           {{ tech.title }}
         </UBadge>
@@ -51,7 +53,7 @@ const props = defineProps([
       </div>
     </div>
 
-    <div>
+    <div class="hidden md:block">
       <UButton
         v-if="props.link"
         icon="i-lucide-external-link" 
